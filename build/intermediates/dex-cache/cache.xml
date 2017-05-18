@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/libs/ormlite-core-4.49.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9a8b276da6dada8141f614d3feba25a0e8589db7">
+        <dex dex="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/build/intermediates/transforms/dex/AnZhiMarket/debug/folders/1000/2/ormlite-core-4.49_5e861a5d3aec58aaf35f08793203d0bd78a76335/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/build/intermediates/incremental-classes/AnZhiMarket/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0f74801852db5b28119ae0cba1c2293b39289a04">
+        <dex dex="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/build/intermediates/transforms/dex/AnZhiMarket/debug/folders/1000/10000/instant-run-bootstrap_1807ff289dd01ad92afd987f17901b7027725f45/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/libs/mta-mid-sdk-2.20.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5bfd1257d56cde77a94f3678426119eb11ebb165">
+        <dex dex="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/build/intermediates/transforms/dex/AnZhiMarket/debug/folders/1000/2/mta-mid-sdk-2.20_3b5f5b248c008114c655675042cb47c237b9bfc1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/build/intermediates/incremental-runtime-classes/AnZhiMarket/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/build/intermediates/transforms/dex/AnZhiMarket/debug/folders/1000/10000/instant-run_78d2d1b1f97f0bda58d07e9ad7e00aceacba557e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/libs/mta-android-stat-sdk-2.1.0_20160111.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6c9e34424e1c8bcdf80df5902c5315f74a3632cf">
+        <dex dex="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/build/intermediates/transforms/dex/AnZhiMarket/debug/folders/1000/2/mta-android-stat-sdk-2.1.0_20160111_7fc5635b63ba921a5d00220cd0e505aeb28f89e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/libs/ormlite-android-4.49.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ecfae85e17f2472852fa8298952f9d52f6a6bfa4">
+        <dex dex="/Users/lincoln/Android/zhongkun/Project/Safe/Firewall/app/build/intermediates/transforms/dex/AnZhiMarket/debug/folders/1000/2/ormlite-android-4.49_66dd62bec3d7e3342db1eedd42963e7d6107a912/classes.dex" />
+    </item>
+
+</items>

@@ -6,6 +6,7 @@ import android.net.VpnService;
 import android.os.Handler;
 import android.os.ParcelFileDescriptor;
 
+import com.orhanobut.logger.Logger;
 import com.timedancing.easyfirewall.activity.MainActivity;
 import com.timedancing.easyfirewall.builder.HtmlBlockingInfoBuilder;
 import com.timedancing.easyfirewall.constant.AppDebug;
@@ -127,6 +128,7 @@ public class FirewallVpnService extends VpnService implements Runnable {
 					in.close();
 					throw new Exception("LocalServer stopped.");
 				}
+				mIPHeader.timestamp = System.currentTimeMillis();
 				onIPPacketReceived(mIPHeader, size);
 			}
 			Thread.sleep(100);
@@ -136,9 +138,14 @@ public class FirewallVpnService extends VpnService implements Runnable {
 	}
 
 	void onIPPacketReceived(IPHeader ipHeader, int size) throws IOException {
+		byte[] byteArray = new byte[100];
+		System.arraycopy(byteArray,0,byteArray,0,20);
+		String dataString = byteArray.toString();
 
 		switch (ipHeader.getProtocol()) {
 			case IPHeader.TCP:
+				printIpheader(ipHeader,"if "+dataString);
+
 				TCPHeader tcpHeader = mTCPHeader;
 				tcpHeader.mOffset = ipHeader.getHeaderLength(); //矫正TCPHeader里的偏移量，使它指向真正的TCP数据地址
 				if (tcpHeader.getSourcePort() == mTcpProxyServer.Port) {
@@ -157,6 +164,7 @@ public class FirewallVpnService extends VpnService implements Runnable {
 					}
 
 				} else {
+					printIpheader(ipHeader,"else "+dataString);
 
 					//添加端口映射
 					int portKey = tcpHeader.getSourcePort();
@@ -364,5 +372,12 @@ public class FirewallVpnService extends VpnService implements Runnable {
 
 	public void setVpnRunningStatus(boolean isRunning) {
 		IsRunning = isRunning;
+	}
+
+
+	private void printIpheader(IPHeader ipHeader,String tag){
+		Logger.d(tag+" "+ipHeader.timestamp +" | "
+				+CommonMethods.ipIntToInet4Address(ipHeader.getSourceIP())
+				+" | "+CommonMethods.ipIntToInet4Address(ipHeader.getDestinationIP())) ;
 	}
 }

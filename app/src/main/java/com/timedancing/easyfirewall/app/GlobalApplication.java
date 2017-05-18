@@ -16,6 +16,7 @@ import java.util.Properties;
 public class GlobalApplication extends Application {
 
 	private static GlobalApplication sInstance;
+	public static Context context;
 
 	public static GlobalApplication getInstance() {
 		return sInstance;
@@ -50,6 +51,7 @@ public class GlobalApplication extends Application {
 		AVOSCloud.initialize(this, ApiConstant.LEANCLOUND_APP_ID, ApiConstant.LEANCLOUD_APP_KEY);
 
 		ProxyConfig.Instance.setVpnStatusListener(new StatusListener());
+		context = getApplicationContext();
 	}
 
 

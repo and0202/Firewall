@@ -89,6 +89,7 @@ android {
 			manifestPlaceholders = [CHANNEL_NAME: "Nduo"]
 		}
 	}
+    buildToolsVersion '25.0.0'
 }
 
 File propFile = file("sign.properties");
@@ -134,4 +135,7 @@ dependencies {
 	compile 'cn.leancloud.android:avoscloud-sdk:v3.+'
 
 	compile 'me.relex:circleindicator:1.1.8@aar'
+
+	compile 'com.orhanobut:logger:1.15'
+
 }

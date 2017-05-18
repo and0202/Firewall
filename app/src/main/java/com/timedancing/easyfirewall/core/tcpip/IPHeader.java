@@ -46,6 +46,8 @@ public class IPHeader {
 	static final short offset_crc = 10; //10：首部校验和偏移
 	static final int offset_op_pad = 20; //20：选项 + 填充
 
+	public static long timestamp = 0;
+
 	public byte[] mData;
 	public int mOffset;
 
